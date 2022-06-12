@@ -117,6 +117,8 @@ public class Application {
                     System.out.println("-----------------");
                     System.out.println("\n");
                     break;
+                default:
+                    System.out.println("Select a correct options.");
         }
         }while (selection != 0);
     }
