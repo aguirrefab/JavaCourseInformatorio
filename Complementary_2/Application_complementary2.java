@@ -1,7 +1,7 @@
 import src.*;
 
+import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Application_complementary2 {
 
@@ -26,7 +26,7 @@ public class Application_complementary2 {
 
             selection = input.nextInt();
 
-            switch (selection){
+            switch (selection) {
                 case 1:
                     System.out.println("-----------------");
                     System.out.println("Welcome to the exercise 1: list of favorite cities");
@@ -66,6 +66,25 @@ public class Application_complementary2 {
                 case 7:
                     System.out.println("-----------------");
                     System.out.println("Welcome to the exercise 7: function for generate array of Strings");
+
+                    System.out.println("Please, enter the first number: ");
+                    int num1 = input.nextInt();
+                    System.out.println("Please, enter the second number: ");
+                    int num2 = input.nextInt();
+
+                    while (num1 >= num2 || num2 <= 0){
+                        System.out.printf("Enter another number: (more than %d) ", num1);
+                        num2 = input.nextInt();
+                    }
+
+                    System.out.println("number 1 (start) = "+ num1);
+                    System.out.println("number 2 (limit) = "+ num2);
+
+                    System.out.println("-----------------");
+                    List<String> fizzBuzzGenerate = Exercise7.generateStringArray(num1, num2);
+                    System.out.println("The list generated is: ");
+                    System.out.println(fizzBuzzGenerate);
+                    System.out.println("-----------------");
                     System.out.println("\n");
                     break;
             }
