@@ -1,6 +1,5 @@
-import Complementary_2.*;
+import src.*;
 
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -20,6 +19,7 @@ public class Application_complementary2 {
             System.out.println("(4) Exercise 4: the group of students");
             System.out.println("(5) Exercise 5: the report worked hours");
             System.out.println("(6) Exercise 6: list and report of employees");
+            System.out.println("(7) Exercise 7: function for generate array of Strings");
 
             System.out.println("(0) To Close the program");
             System.out.print("Your response: ");
@@ -60,8 +60,12 @@ public class Application_complementary2 {
                 case 6:
                     System.out.println("-----------------");
                     System.out.println("Welcome to the exercise 6: list and report of employees");
-                    Set<Employee> employeeSet = Exercise6.createEmployee();
-                    Exercise6.listOfEmployee(employeeSet);
+                    Exercise6.menuExercise6();
+                    System.out.println("\n");
+                    break;
+                case 7:
+                    System.out.println("-----------------");
+                    System.out.println("Welcome to the exercise 7: function for generate array of Strings");
                     System.out.println("\n");
                     break;
             }
