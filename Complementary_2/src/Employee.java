@@ -1,6 +1,5 @@
-package Complementary_2;
+package src;
 
-import java.time.LocalTime;
 
 public class Employee {
     private String name;
@@ -63,22 +62,19 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", DNI='" + DNI + '\'' +
-                ", hoursWorked=" + hoursWorked +
-                ", valuePerHours=" + valuePerHours +
-                '}';
+        return
+                "# Employee: " + "\n"
+                + "-- Name = " + name +", " + surname + "\n"
+                + "-- DNI = " + DNI + "\n"
+                + "-- Hours Worked = " + hoursWorked + "\n"
+                + "-- Price per hour = " + valuePerHours + "\n"
+                + "-----------";
     }
 
     public static double totalSalary(Employee employee){
         double salary = employee.getHoursWorked()* employee.getValuePerHours();
         return salary;
     }
-
-
-
 
 }
 
