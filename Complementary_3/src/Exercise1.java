@@ -1,3 +1,4 @@
+package src;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -5,61 +6,50 @@ import java.util.Scanner;
 
 public class Exercise1 {
 
-    public static void listOfFavoriteCities(){
+    public static List<String> generateStringList() {
 
-        List<String> favoriteCities = new ArrayList<>();
+        List<String> wordsList = new ArrayList<>();
+
+        Scanner sc = new Scanner(System.in);
         int option;
 
         do {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Please select a option: ");
-            System.out.println("(1) - Add favorite cities");
-            System.out.println("(2) - Delete a city");
-            System.out.println("(3) - Show the list of cities");
+            System.out.println("(1) - Add words to the list");
+            System.out.println("(2) - Autogenerate a list of randoms words");
             System.out.println("(0) - Exit to the home menu");
             option = sc.nextInt();
 
-            switch (option){
-                case 1:
-                    int op;
-                    do {
-                        System.out.println("Add your favorite Argentine city: ");
-                        String city = sc.next();
-                        favoriteCities.add(city);
-                        System.out.println("(0) - Exit to the home menu");
-                        System.out.println("(1) - Add another city");
-                        System.out.print("Your response: ");
-                        op = sc.nextInt();
-                    } while (op != 0);
-                    System.out.println("\n");
-                    break;
-                case 2:
-                    try {
-                        System.out.println("Select the city to delete: ");
-                        for (int i = 0; i <= favoriteCities.size(); i++)
-                            System.out.println("# "+ i + " - " + favoriteCities.get(i));
-                        System.out.print("Your selection: ");
-                        int ind = sc.nextInt();
-                        favoriteCities.remove(ind);
-                        for (String cit : favoriteCities)
-                            System.out.println(cit);
-                    } catch (IndexOutOfBoundsException ex){
-                        System.out.println("Ups! cities have not been loaded --> "+ ex.getMessage());
+            if (option == 1){
+                int op;
+                do {
+                    System.out.println("Your word: ");
+                    String word = sc.next();
+                    wordsList.add(word);
+                    // add null and " " element in list
+                    for (int i = wordsList.size()-1; i < 8; i++) {
+                        if (i % 3 == 0) {
+                            wordsList.add(null);
+                        } else if (i % 2 == 0) {
+                            wordsList.add("");
+                        }
                     }
-                    System.out.println("\n");
-                    break;
-                case 3:
-                    try {
-                        System.out.println("Favorite Argentine Cities: ");
-                        for (int i = 0; i < favoriteCities.size(); i++)
-                            System.out.println(i + " - " + favoriteCities.get(i));
-                        System.out.println("\n");
-                    } catch (IndexOutOfBoundsException ex){
-                        System.out.println("Ups! cities have not been loaded --> "+ ex.getMessage());
-                    }
-                    System.out.println("\n");
-                    break;
+                    System.out.println("(1) - Add another word");
+                    System.out.println("(0) - Cancel");
+                    System.out.print("Your response: ");
+                    op = sc.nextInt();
+                } while (op != 0);
+                System.out.println("\n");
+
+            } else if (option == 2) {
+                wordsList.add("Hola");
+                wordsList.add(null);
+                wordsList.add("Informatorio");
+                wordsList.add("");
+                System.out.println("\n");
             }
-        } while (option != 0 && option <= 3);
-    }
+
+        } while(option !=0 && option <=1);
+
+        return wordsList;
+}
 }

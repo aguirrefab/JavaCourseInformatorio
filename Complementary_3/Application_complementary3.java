@@ -1,6 +1,7 @@
-import Complementary_2.*;
+import src.*;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -14,7 +15,7 @@ public class Application_complementary3 {
         do {
             System.out.println("-------------- PRINCIPAL MENU ----------------");
             System.out.println("Please, select one of exercise to perform:");
-            System.out.println("(1) Exercise 1: list of favorite cities");
+            System.out.println("(1) Exercise 1: Filter list using Streams");
             System.out.println("(2) Exercise 2: list of numbers");
             System.out.println("(3) Exercise 3: the cards game");
             System.out.println("(4) Exercise 4: the group of students");
@@ -30,40 +31,14 @@ public class Application_complementary3 {
                 case 1:
                     System.out.println("-----------------");
                     System.out.println("Welcome to the exercise 1: list of favorite cities");
-                    Exercise1.listOfFavoriteCities();
+                    List<String> strList = Exercise1.generateStringList();
+
+                    System.out.println("The list generate is: ");
+                    System.out.println(strList);
+
                     System.out.println("\n");
                     break;
-                case 2:
-                    System.out.println("-----------------");
-                    System.out.println("Welcome to the exercise 2: list of numbers");
-                    Exercise2.listOfNumbers();
-                    System.out.println("\n");
-                    break;
-                case 3:
-                    System.out.println("-----------------");
-                    System.out.println("Welcome to the exercise 3: the game of cards");
-                    Exercise3.cardGame();
-                    System.out.println("\n");
-                    break;
-                case 4:
-                    System.out.println("-----------------");
-                    System.out.println("Welcome to the exercise 4: groups of students");
-                    Exercise4.groupsOfStudents();
-                    System.out.println("\n");
-                    break;
-                case 5:
-                    System.out.println("-----------------");
-                    System.out.println("Welcome to the exercise 5: report of worked hours");
-                    Exercise5.controlHoursWorked();
-                    System.out.println("\n");
-                    break;
-                case 6:
-                    System.out.println("-----------------");
-                    System.out.println("Welcome to the exercise 6: list and report of employees");
-                    Set<Employee> employeeSet = Exercise6.createEmployee();
-                    Exercise6.listOfEmployee(employeeSet);
-                    System.out.println("\n");
-                    break;
+
             }
         }while (selection != 0);
     }
