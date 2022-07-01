@@ -1,6 +1,5 @@
 package src;
 
-
 public class Employee {
     private String name;
     private String surname;
@@ -70,12 +69,6 @@ public class Employee {
                 + "-- Price per hour = " + valuePerHours + "\n"
                 + "-----------";
     }
-
-    public static double totalSalary(Employee employee){
-        double salary = employee.getHoursWorked()* employee.getValuePerHours();
-        return salary;
-    }
-
 }
 
 

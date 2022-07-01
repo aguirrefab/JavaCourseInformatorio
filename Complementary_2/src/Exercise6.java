@@ -100,9 +100,3 @@ public class Exercise6 {
         return salaryPerEmployee;
     }
 }
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-package Complementary_2;
+package src;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Exercise4 {
                     int places = 1;
 
                     while (places <= 12){
-                        System.out.println("Places avalilable = " + (12-places));
+                        System.out.println("Places available = " + (12-places));
                         System.out.println("Add student: ");
                         String nameStudent = sc.next();
                         students.add(nameStudent);
