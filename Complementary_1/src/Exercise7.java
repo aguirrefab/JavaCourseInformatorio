@@ -1,21 +1,15 @@
-package Complementary_1;
-
-import java.util.Locale;
-
+package src;
 public class Exercise7 {
-    public static void textToUpper(String phrase){
+    public static String textToUpper(String phrase){
+        // create an array the chars from the phrase arguments
         char[] charactersText = phrase.toCharArray();
+        // change char by char present in the array. Using ASCII code
+        // create a new string to return this value
+        String newPhrase = "";
         for (char character : charactersText){
-            character = Character.toUpperCase(character);
-            System.out.print(character);
-        }
-        System.out.println("\n");
+            char upperChar = (char) (character - 32);
+            newPhrase = newPhrase + upperChar;
+            }
+        return newPhrase;
     }
-
-    //Another way
-    public static String textToUpperSimple(String phrase){
-        return phrase.toUpperCase();
-    }
-
-
 }

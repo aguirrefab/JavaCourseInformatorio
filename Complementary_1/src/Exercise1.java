@@ -1,5 +1,4 @@
-package Complementary_1;
-
+package src;
 import java.util.Scanner;
 
 public class Exercise1 {

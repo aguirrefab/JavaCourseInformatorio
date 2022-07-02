@@ -1,7 +1,4 @@
-package Complementary_1;
-
-import java.util.Scanner;
-
+package src;
 public class Exercise5 {
     public static int productOfAddition(int num1, int num2) {
         int result = 0;

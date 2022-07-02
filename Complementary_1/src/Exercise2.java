@@ -1,15 +1,11 @@
-package Complementary_1;
+package src;
 
 import java.util.Scanner;
 
 public class Exercise2 {
-
     public Exercise2(){}
-
     public static void arithmeticOperations(int num1, int num2){
-
         int option = 0;
-
         do {
             System.out.println("Perfect!, now you can select the operation you want to perform:");
             System.out.println("(1) Addition");
@@ -69,5 +65,4 @@ public class Exercise2 {
         }
         }while (option != 0 && option <= 5);
     }
-
 }

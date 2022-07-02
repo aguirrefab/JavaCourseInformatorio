@@ -1,16 +1,12 @@
-package Complementary_1;
-
+package src;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Exercise8 {
-
     public static void usersInformation() {
-
         Scanner sc = new Scanner(System.in);
-
         // Create and add elementos for the arrayList
         List<String> usersInformation = new ArrayList<>();
 
