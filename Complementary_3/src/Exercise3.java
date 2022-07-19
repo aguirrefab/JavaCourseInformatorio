@@ -14,9 +14,12 @@ public class Exercise3 {
                 "Wonder Woman",
                 "brainiac");
 
-        List<Integer> filterWords = words.stream()
-                .filter(word -> words.contains("b")).count()
-                .collect(Collectors.toList());
+        Long filterWords = words.stream()
+                .filter(word -> word.startsWith("B") | word.startsWith("b"))
+                .count();
+
+        System.out.println(filterWords);
+
     }
 
 }
